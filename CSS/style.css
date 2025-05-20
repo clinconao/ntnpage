@@ -1,5 +1,16 @@
-.crop img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* o 'contain' si quieres encajar sin recortar */
-  }
+.logo {
+  height: 40px;
+  width: auto;
+  margin-right: 10px;
+}
+.whatsapp-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  width: 60px;
+  height: 60px;
+}
+.whatsapp-icon:hover img {
+  transform: scale(1.1);
+}
