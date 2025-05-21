@@ -38,21 +38,24 @@
   overflow: hidden;
 }
 
-/* Navbar base */
-/* === NAVBAR BASE === */
+
+/* ===== Navbar Base ===== */
 .navbar {
-  position: fixed; /* Cambiado de sticky */
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   background: rgba(0, 0, 0, 0.8);
-  color: white;
-  padding: 15px 20px;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   z-index: 999;
+  box-sizing: border-box;
   transition: top 0.4s ease;
 }
 
-/* === LOGO === */
+/* ===== Logo ===== */
 .logo {
   display: flex;
   align-items: center;
@@ -60,44 +63,24 @@
 }
 
 .logo img {
-  width: 32px;
-  height: 32px;
-  object-fit: contain;
-  border-radius: 50%; 
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid white; /* opcional */
 }
 
 .logo span {
-  font-size: 18px;
-  font-weight: bold;
+  color: #eee;          /* Letra más clara */
+  font-weight: 600;
+  font-size: 1.2rem;    /* Más grande */
+  user-select: none;
 }
 
-
-
-/* === LINKS === */
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-  transition: max-height 0.4s ease;
-}
-.navbar {
-  transition: top 0.4s ease;
-}
-
-.nav-links li a {
-  color: white;
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-.nav-links li a:hover {
-  color: #ccc;
-}
-
-/* === MENU HAMBURGUESA === */
+/* ===== Menu icon (hamburguesa / X) ===== */
 .menu-icon {
   display: none;
-  font-size: 26px;
+  font-size: 28px;       /* Más grande */
   cursor: pointer;
   color: white;
   padding: 8px 12px;
@@ -105,57 +88,73 @@
   background-color: rgba(255, 255, 255, 0.1);
   transition: background 0.3s;
   position: relative;
+  user-select: none;
 }
 
-.menu-icon:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-}
-
-
+/* Ocultar checkbox */
 #menu-toggle {
   display: none;
 }
 
-/* === RESPONSIVE === */
+/* ===== Nav links ===== */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links li a {
+  color: white;
+  font-family: 'Arial', sans-serif;
+  text-decoration: none;
+  font-weight: 900;
+  font-size: 1,8rem;     /* Más grande */
+  letter-spacing: 0.05em;
+  transition: color 0.9s ease;
+}
+
+.nav-links li a:hover {
+  color: #f0a500;
+}
+
+/* ===== Responsive ===== */
 @media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+
+  /* Mostrar ☰ por defecto */
+  .menu-icon::before {
+    content: "☰";
+    display: block;
+  }
+
+  /* Cambiar a ✕ cuando menú está abierto */
+  #menu-toggle:checked + .menu-icon::before {
+    content: "✕";
+  }
+
   .nav-links {
     position: absolute;
     top: 60px;
     right: 0;
     width: 100%;
-    flex-direction: column;
-    background: rgba(0, 0, 0, 0.9); /* Transparente también */
-    text-align: center;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.5s ease;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.9);
+    text-align: center;
+    transition: max-height 0.4s ease;
+    border-radius: 0 0 10px 10px;
+    box-sizing: border-box;
   }
 
-  @media (max-width: 768px) {
-    .menu-icon {
-      display: block;
-    }
-  
-
+  /* Mostrar menú al activar checkbox */
   #menu-toggle:checked + .menu-icon + .nav-links {
-    max-height: 500px;
+    max-height: 300px; /* Ajusta según cantidad de ítems */
   }
 
-  .menu-icon {
-    display: block;
+  .nav-links li {
+    margin: 15px 0;
   }
-}
-
-.menu-icon::before {
-  content: "☰";
-  display: block;
-}
-
-/* Cambia a X si está chequeado */
-#menu-toggle:checked + .menu-icon::before {
-  content: "✕";
-}
-}
-body {
-  padding-top: 70px; /* Ajusta si tu navbar es más alto */
 }
