@@ -37,3 +37,125 @@
   border-radius: 10px;
   overflow: hidden;
 }
+
+/* Navbar base */
+/* === NAVBAR BASE === */
+.navbar {
+  position: fixed; /* Cambiado de sticky */
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 15px 20px;
+  z-index: 999;
+  transition: top 0.4s ease;
+}
+
+/* === LOGO === */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  border-radius: 50%; 
+}
+
+.logo span {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+
+
+/* === LINKS === */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  transition: max-height 0.4s ease;
+}
+.navbar {
+  transition: top 0.4s ease;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #ccc;
+}
+
+/* === MENU HAMBURGUESA === */
+.menu-icon {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: background 0.3s;
+  position: relative;
+}
+
+.menu-icon:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+
+#menu-toggle {
+  display: none;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.9); /* Transparente también */
+    text-align: center;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+  }
+
+  @media (max-width: 768px) {
+    .menu-icon {
+      display: block;
+    }
+  
+
+  #menu-toggle:checked + .menu-icon + .nav-links {
+    max-height: 500px;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+}
+
+.menu-icon::before {
+  content: "☰";
+  display: block;
+}
+
+/* Cambia a X si está chequeado */
+#menu-toggle:checked + .menu-icon::before {
+  content: "✕";
+}
+}
+body {
+  padding-top: 70px; /* Ajusta si tu navbar es más alto */
+}
