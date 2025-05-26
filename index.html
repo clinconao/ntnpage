@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">
     <link rel="stylesheet" href="./CSS/style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <style>
@@ -98,33 +99,47 @@
             </div>
 
             <div id="Salchichas" class="w3-container menu w3-padding-32 w3-white">
-                <h1><b>Hot Dog</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$1.500</span></h1>
-                <p class="w3-text-grey">Salchicha en pan, puedes agregar salsas a tu gusto</p>
+                <div data-aos="fade-right">
+                    <h1><b>Hot Dog</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$1.500</span></h1>
+                    <p class="w3-text-grey">Salchicha en pan, puedes agregar salsas a tu gusto</p>
+                </div>
+                <hr>
+                <div data-aos="fade-left">
+                    <h1><b>Tomate Mayo</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$1.800</span></h1>
+                    <p class="w3-text-grey">Salchicha en pan con tomate picado y mayonesa casera</p>
+
+
+                </div>
+
+                <hr>
+                <div data-aos="fade-right">
+                    <h1><b>Palta Mayo</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$2.000</span></h1>
+                    <p class="w3-text-grey">Salchicha en pan con palta y mayonesa casera</p>
+                </div>
                 <hr>
 
-                <h1><b>Tomate Mayo</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$1.800</span></h1>
-                <p class="w3-text-grey">Salchicha en pan con tomate picado y mayonesa casera</p>
-                <hr>
-
-                <h1><b>Palta Mayo</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$2.000</span></h1>
-                <p class="w3-text-grey">Salchicha en pan con palta y mayonesa casera</p>
-                <hr>
 
                 <h1><b>Completo</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$2.500</span></h1>
                 <p class="w3-text-grey">Salchicha en pan con chucrut, americana, tomate y mayo casera</p>
                 <hr>
 
-                <h1><b>Elige tus ingredientes</b> <span class="w3-tag w3-red w3-round">Hot!</span><span
-                        class="w3-right w3-tag w3-dark-grey w3-round">$3.990</span></h1>
-                <p class="w3-text-grey">Base salchicha y pan + 4 ingredientes</p>
+                <div data-aos="fade-right">
+                    <h1><b>Elige tus ingredientes</b> <span class="w3-tag w3-red w3-round">Hot!</span><span
+                            class="w3-right w3-tag w3-dark-grey w3-round">$3.990</span></h1>
+                    <p class="w3-text-grey">Base salchicha y pan + 4 ingredientes</p>
+
+                </div>
+
                 <hr>
 
                 <h1><b>Italiano</b> <span class="w3-tag w3-grey w3-round">Clásico</span><span
                         class="w3-right w3-tag w3-dark-grey w3-round">$2.500</span></h1>
                 <p class="w3-text-grey">Salchicha en pan con tomate, palta y mayo casera</p>
                 <hr>
-                <h1><b>Dinámico</b><span class="w3-right w3-tag w3-dark-grey w3-round">$2.990</span></h1>
-                <p class="w3-text-grey">Salchicha en pan con chucrut, americana, tomate, palta y mayo casera</p>
+                <div data-aos="fade-right">
+                    <h1><b>Dinámico</b><span class="w3-right w3-tag w3-dark-grey w3-round">$2.990</span></h1>
+                    <p class="w3-text-grey">Salchicha en pan con chucrut, americana, tomate, palta y mayo casera</p>
+                </div>
             </div>
 
             <div id="Churrasco" class="w3-container menu w3-padding-32 w3-white">
@@ -316,18 +331,18 @@
                         temas con una buena dosis de risas y conversaciones genuinas. Únete a nosotros.</p>
                     <div class="podcast-buttons wrapper">
                         <div>
-                                                    <a href="https://www.youtube.com/@NoTieneNombrePodcast" target="_blank"
-                            class="podcast-btn youtube">
-                            <img src="https://img.icons8.com/ios-filled/24/ffffff/youtube-play.png" alt="YouTube" />
-                            Ver en YouTube
-                        </a>
+                            <a href="https://www.youtube.com/@NoTieneNombrePodcast" target="_blank"
+                                class="podcast-btn youtube">
+                                <img src="https://img.icons8.com/ios-filled/24/ffffff/youtube-play.png" alt="YouTube" />
+                                Ver en YouTube
+                            </a>
                         </div>
                         <div>
-                        <a href="https://open.spotify.com/show/7ytI3GHbxWjtwu9v990B68?si=05926b6f659a4a9a"
-                            target="_blank" class="podcast-btn spotify">
-                            <img src="https://img.icons8.com/ios-filled/24/ffffff/spotify--v1.png" alt="Spotify" />
-                            Escuchar en Spotify
-                        </a>
+                            <a href="https://open.spotify.com/show/7ytI3GHbxWjtwu9v990B68?si=05926b6f659a4a9a"
+                                target="_blank" class="podcast-btn spotify">
+                                <img src="https://img.icons8.com/ios-filled/24/ffffff/spotify--v1.png" alt="Spotify" />
+                                Escuchar en Spotify
+                            </a>
                         </div>
 
 
@@ -449,8 +464,10 @@
             lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
         });
     </script>
-
-
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 
 </body>
 
