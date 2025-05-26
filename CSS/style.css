@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@600&display=swap');
+
+body{
+  font-family: 'Baloo 2', sans-serif;
+}
+
+
 .logo {
   color: #fff;
   font-weight: 800;
@@ -127,6 +134,71 @@
   z-index: 2;
   position: relative;
 }
+
+.section {
+  padding: 60px 20px;
+  background-color: #292929;
+  border-radius: 16px;
+  margin: 20px;
+}
+
+.podcast-section {
+  background-color: #111;
+  color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.podcast-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.podcast-section h2 {
+  font-size: clamp(1.8rem, 5vw, 2.5rem);
+  margin-bottom: 15px;
+  color: #f0a500;
+}
+
+.podcast-section p {
+  font-size: clamp(1rem, 3vw, 1.2rem);
+  margin-bottom: 30px;
+  color: #ddd;
+}
+
+.podcast-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #f0a500;
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.podcast-btn:hover {
+  background-color: #ffa733;
+}
+
+.podcast-video {
+  margin-top: 40px;
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+}
+
+.podcast-video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 
 
 /* ===== Responsive ===== */
