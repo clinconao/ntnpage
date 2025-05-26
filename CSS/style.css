@@ -199,6 +199,49 @@ body{
   height: 100%;
 }
 
+.podcast-buttons.wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 24px; /* Aumentado para dar más separación */
+  margin-bottom: 30px;
+}
+
+.podcast-buttons.wrapper > div {
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.podcast-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 24px;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: transform 0.2s, background 0.3s ease;
+}
+
+.podcast-btn img {
+  width: 22px;
+  height: 22px;
+}
+
+.podcast-btn.youtube {
+  background-color: #FF0000;
+}
+
+.podcast-btn.spotify {
+  background-color: #1DB954;
+}
+
+.podcast-btn:hover {
+  transform: scale(1.05);
+}
+
 
 
 /* ===== Responsive ===== */
