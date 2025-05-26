@@ -1,15 +1,16 @@
 .logo {
-  height: 40px;
-  width: auto;
-  margin-right: 10px;
+  color: #fff;
+  font-weight: 800;
+  font-size: 1.6rem;
+  text-shadow: 1px 1px 2px #000;
 }
 .whatsapp-icon {
   position: fixed;
   bottom: 20px;
   right: 20px;
   background-color: #25D366;
-  color: white;
-  font-size: 40px;
+  color: black;
+  font-size: 60px;
   padding: 15px;
   border-radius: 50%;
   z-index: 1000;
@@ -37,7 +38,6 @@
   border-radius: 10px;
   overflow: hidden;
 }
-
 
 /* ===== Navbar Base ===== */
 .navbar {
@@ -108,7 +108,7 @@
   font-family: 'Arial', sans-serif;
   text-decoration: none;
   font-weight: 900;
-  font-size: 1,8rem;     /* Más grande */
+  font-size: 1.2rem;     /* Más grande */
   letter-spacing: 0.05em;
   transition: color 0.9s ease;
 }
@@ -116,6 +116,18 @@
 .nav-links li a:hover {
   color: #f0a500;
 }
+
+.ingredientes-titulo {
+  color: white;
+  font-size: clamp(1.2rem, 4vw, 2.5rem); /* Se adapta al tamaño de pantalla */
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.85); /* Más profunda y difusa */
+  margin-bottom: 20px;
+  z-index: 2;
+  position: relative;
+}
+
 
 /* ===== Responsive ===== */
 @media (max-width: 768px) {
@@ -158,3 +170,10 @@
     margin: 15px 0;
   }
 }
+
+.tablink {
+  font-size: clamp(14px, 3vw, 22px); /* Mín 14px, ideal 3vw, máx 22px */
+  font-weight: bold;
+  text-align: center;
+}
+
